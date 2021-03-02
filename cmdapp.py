@@ -5,6 +5,12 @@ class BMI_Retirement:
 
 	def bmi(self, w, h):
 		# w is weight, h is height
+		self.wflag = False
+		self.hflag = False
+		if w >= 50 and w <= 650:
+			self.wflag = True
+		if h >= 36 and h <= 96:
+			self.hflag = True
 		h2 = h*h
 		self.cat = 'Default'
 		# calculate bmi by dividing weight in pounds (lb) by height in inches (in) squared and multiplying by a conversion
@@ -81,4 +87,4 @@ def main():
 	return
 
 
-main()
+#main()

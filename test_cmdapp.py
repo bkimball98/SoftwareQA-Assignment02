@@ -20,6 +20,15 @@ class TestBMICalculations(unittest.TestCase):
         br = BMI_Retirement()
         br.bmi(215, 73)
         self.assertEqual(br.cat, 'Overweight')
+    def test_inputweight(self):
+        br = BMI_Retirement()
+        br.bmi(300, 68)
+        self.assertIs(br.wflag, True)
+    def test_inputheight(self):
+        br = BMI_Retirement()
+        br.bmi(300, 80)
+        self.assertIs(br.hflag, True)
+    
 
 class TestRetirement(unittest.TestCase):
 
